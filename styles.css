@@ -1,0 +1,71 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.magazine-cover {
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    "feature-article feature-article cover-image"
+    "small-article1 small-article2 cover-image";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr 1fr;
+  gap: 10px;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.title {
+  grid-area: title;
+  font-size: 3rem;
+  text-align: center;
+  color: #2c3e50;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #2c3e50;
+}
+
+.feature-article {
+  grid-area: feature-article;
+  background: #e0f7fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.small-article1 {
+  grid-area: small-article1;
+  background: #ffe0b2;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.small-article2 {
+  grid-area: small-article2;
+  background: #d1c4e9;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.cover-image {
+  grid-area: cover-image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c8e6c9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cover-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
